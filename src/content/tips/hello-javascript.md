@@ -1,10 +1,12 @@
 ---
 title: "Hello javascript"
-pubDate: 2024-05-07
+pubDate: 2024-05-08
 description: "Hello this is mi first recomendation"
-image:
+image: "https://picsum.photos/id/2/600/600"
 tags: ["astro", "javascript"]
 card: "../components/Card.astro"
+layout: "../../layouts/Posts.astro"
+
 
 ---
 
