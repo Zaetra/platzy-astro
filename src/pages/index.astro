@@ -9,8 +9,7 @@ interface Frontmatter {
   tags: string[];
   pubDate: string;
 }
-const allPosts = await Astro.glob<Frontmatter>('../content/hello/*.md');
-console.log("Contenido de allPosts:", allPosts);
+const allPosts = await Astro.glob<Frontmatter>('../content/tips/*.md');
 ---
 
 <Layout title="Welcome to Astro.">
@@ -24,6 +23,7 @@ console.log("Contenido de allPosts:", allPosts);
           title={item?.frontmatter?.title}
           time={item?.frontmatter?.pubDate} 
           tags={item?.frontmatter?.tags}
+          
           />
         ))
       }

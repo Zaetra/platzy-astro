@@ -3,10 +3,11 @@ interface Props {
   title: string;
   time: string;
   tags: string[];
+  slug: string;
 }
 
-const { time, tags, title } = Astro.props;
-console.log('tags: ', tags)
+const { time, tags, title, slug } = Astro.props;
+console.log('slug: ',slug)
 ---
 
 <article
@@ -17,7 +18,7 @@ console.log('tags: ', tags)
       {time}
     </time>
 
-    <a href="#">
+    <a href={`/posts/${[slug]}`}>
       <h3 class="mt-0.5 text-lg font-medium text-gray-900">{title}</h3>
     </a>
 
