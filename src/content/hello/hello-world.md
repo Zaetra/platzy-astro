@@ -1,5 +1,5 @@
 ---
-title:"Hello javascript"
+title: "Hello world"
 pubDate: 2024-05-07
 description: "Hello this is mi first recomendation"
 image:

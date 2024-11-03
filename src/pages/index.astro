@@ -9,7 +9,7 @@ interface Frontmatter {
   tags: string[];
   pubDate: string;
 }
-const allPosts = await Astro.glob<Frontmatter>('../content/*.md');
+const allPosts = await Astro.glob<Frontmatter>('../content/hello/*.md');
 console.log("Contenido de allPosts:", allPosts);
 ---
 
@@ -20,12 +20,11 @@ console.log("Contenido de allPosts:", allPosts);
     <ul role="list" class="link-card-grid">
       {
         allPosts.map((item) => (
-          console.log(item)
-          //<Card 
-          //title={item?.frontmatter?.title}
-         // time={item?.frontmatter?.pubDate} 
-       //   tags={item?.frontmatter?.tags}
-         // />
+          <Card 
+          title={item?.frontmatter?.title}
+          time={item?.frontmatter?.pubDate} 
+          tags={item?.frontmatter?.tags}
+          />
         ))
       }
     </ul>
