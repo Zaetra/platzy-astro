@@ -8,6 +8,7 @@ interface Frontmatter {
   title: string;
   tags: string[];
   pubDate: string;
+  slug: string;
 }
 const allPosts = await Astro.glob<Frontmatter>('../content/tips/*.md');
 ---
@@ -18,12 +19,14 @@ const allPosts = await Astro.glob<Frontmatter>('../content/tips/*.md');
     <Hero />
     <ul role="list" class="link-card-grid">
       {
-        allPosts.map((item) => (
+        allPosts.map((item:any) => (
           <Card 
           title={item?.frontmatter?.title}
           time={item?.frontmatter?.pubDate} 
           tags={item?.frontmatter?.tags}
-          
+          slug={item?.frontmatter?.slug}
+
+
           />
         ))
       }
